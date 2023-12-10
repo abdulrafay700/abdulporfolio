@@ -285,4 +285,31 @@ document.querySelector("#color_change_5").addEventListener("click", ()=>{
 // you will get id value or #values data
 
 
+// =======> window load Increment
+
+
+window.addEventListener("load", () => {
+    // Retrieve existing visit records from localStorage
+    let storedRecords = localStorage.getItem("records");
+    let visitRecords;
+
+    // Check if there are existing records
+    if (storedRecords) {
+        visitRecords = JSON.parse(storedRecords);
+        // Increment the counter
+        visitRecords.personsCount += 1;
+        console.log(visitRecords.personsCount);
+    } else {
+        // If no records exist, initialize with count 1
+        visitRecords = {
+            personsCount: 1
+        };
+        console.log("Total Visitor COunter is" + visitRecords.personsCount);
+    }
+
+    // Store the updated records in localStorage
+    localStorage.setItem("records", JSON.stringify(visitRecords));
+});
+
+
 
