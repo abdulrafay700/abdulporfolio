@@ -1,0 +1,32 @@
+:root {
+  --main-color: #000000;
+  --blue: #0000ff;
+  --blue-dark: #18293c;
+  --orange: #ffa500;
+  --green-yellow: #cddc39;
+  --pink-light: #efa2b4;
+  --cyan-light: #aef1ee;
+  --white: #ffffff;
+  --light-scrolling:#757575;
+  --white-alpha-40: rgba(255, 255, 255, 0.40);
+  --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --backdrop-filter-blur: blur(5px);
+}
+
+
+/* body{
+  background-image: linear-gradient(to bottom right, var(--pink-light), var(--cyan-light));
+} */
+body
+{
+  background:url("../img/blackbg.jpg");
+  color: #fff;
+}
+
+::-webkit-scrollbar-track{
+  background-color: var(--light-scrolling)
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
