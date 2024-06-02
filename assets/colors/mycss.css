@@ -1,0 +1,20 @@
+:root {
+    --main-color: #044df8;
+    --blue: #0000ff;
+    --blue-dark: #18293c;
+    --orange: #ffa500;
+    --green-yellow: #cddc39;
+    --pink-light: #efa2b4;
+    --cyan-light: #7276f3;
+    --white: #ffffff;
+    --light-scrolling:#9ea1fd;
+    --white-alpha-40: rgba(255, 255, 255, 0.40);
+    --white-alpha-25: rgba(255, 255, 255, 0.25);
+    --backdrop-filter-blur: blur(5px);
+}
+
+body{
+    background: rgb(2,0,36);
+  background-image:linear-gradient(90deg,#4776E6, #8E54E9);
+  color: black;
+}
