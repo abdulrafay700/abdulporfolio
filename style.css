@@ -708,9 +708,11 @@ display: none;
    margin: 0 15px 30px;
 }
 .portfolio-item-thumbnail img{
+    height: 100%;
     width: 100%;
 }
 .portfolio-item-thumbnail{
+    height: 200px;
     padding: 10px;
     background-color: var(--white-alpha-25);
 }
