@@ -302,18 +302,20 @@ window.addEventListener("load", () => {
         // Increment the counter
         visitRecords.personsCount += 1;
         console.log(visitRecords.personsCount);
-        document.getElementById("totalVistior").innerHTML = visitRecords.personsCount
+        document.getElementById("totalVisitor").innerHTML = visitRecords.personsCount;
     } else {
         // If no records exist, initialize with count 1
         visitRecords = {
             personsCount: 1
         };
-        console.log("Total Visitor COunter is" + visitRecords.personsCount);
+        console.log("Total Visitor Counter is " + visitRecords.personsCount);
+        document.getElementById("totalVisitor").innerHTML = visitRecords.personsCount;
     }
 
     // Store the updated records in localStorage
     localStorage.setItem("records", JSON.stringify(visitRecords));
 });
+
 
 
 
