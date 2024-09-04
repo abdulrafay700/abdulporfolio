@@ -717,17 +717,10 @@ display: none;
     background-color: var(--white-alpha-25);
 }
 
-.wenawa{
-    height: 180px;
-    overflow: hidden;
-}
+
 
 .mt-1{
     margin-top: 1rem;
-}
-
-.wenawa-img{
-height: 1500px !important;
 }
 
 
