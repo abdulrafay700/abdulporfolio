@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- animate css -->
     <script src="https://unpkg.com/scrollreveal"></script>
+<!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 
 
 
@@ -580,26 +585,27 @@
                 <div class="row">
 
                     <div class="contact-form">
-                        <form action="">
+                        <form id="contact-form" action="https://script.google.com/macros/s/AKfycbxq2QKbvvokgHmc6H4tDiEv51jDNJ3MTKVaDaEZK1DoaE8H5E7U26RIGxkEXvzxZbn5/exec" method="post">
                             <div class="row">
                                 <div class="input-group">
-                                    <input type="text" placeholder="name" class="input-control" required>
+                                    <input type="text" name="name" placeholder="Name" class="input-control" required>
                                 </div>
                                 <div class="input-group">
-                                    <input type="email" placeholder="Email" class="input-control" required>
+                                    <input type="email" name="email" placeholder="Email" class="input-control" required>
                                 </div>
                                 <div class="input-group">
-                                    <input type="text" placeholder="Subject" class="input-control" required>
+                                    <input type="text" name="subject" placeholder="Subject" class="input-control" required>
                                 </div>
                                 <div class="input-group">
-                                    <textarea placeholder="Message" class="input-control" required></textarea>
+                                    <textarea name="message" placeholder="Message" class="input-control" required></textarea>
                                 </div>
                                 <div class="submit-btn">
-                                    <button type="submit" class="btn">Send message</button>
+                                    <button type="submit" class="btn" id="senderBtn">Send message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
+                    
 
                     <div class="contact-info">
                         <div class="contact-info-item">
@@ -630,8 +636,8 @@
                                         class="fa-brands fa-github"></i></i></a>
                                 <a href="https://www.youtube.com/channel/UC6FeUY1TyiwG8kGaVn3Cmrw" target="_blank"><i
                                         class="fa-brands fa-youtube"></i></a>
-                                <a href="https://www.youtube.com/@abdulrafay6318" target="_blank"><i
-                                        class="fa-brands fa-square-youtube"></i></a>
+                                <!-- <a href="https://www.youtube.com/@abdulrafay6318" target="_blank"><i
+                                        class="fa-brands fa-square-youtube"></i></a> -->
                                 <a href="https://www.instagram.com/abdul_writes_official/" target="_blank"><i
                                         class="fa-brands fa-instagram"></i></a>
                             </div>
