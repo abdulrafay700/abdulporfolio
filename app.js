@@ -317,5 +317,3 @@ document.querySelector('#contact-form').addEventListener('submit', function(e) {
     .catch(error => console.error('Error!', error.message));
 });
 
-
-
