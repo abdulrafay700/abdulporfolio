@@ -78,8 +78,8 @@ var imgData = [
 
 imgData.forEach(function(itemData,index){
 
-    console.log(imgData[index].img) //both or same working
-    console.log( itemData.img)
+    // console.log(imgData[index].img) //both or same working
+    // console.log( itemData.img)
     
     document.querySelector('.graphics-portfolio').innerHTML += `
     

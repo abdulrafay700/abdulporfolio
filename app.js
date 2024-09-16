@@ -75,7 +75,6 @@ porfoliotab.addEventListener("click",(e)=>{
 
 
         const target = e.target.getAttribute("data-target");
-        console.log(target)
         portfolioContent.querySelector(".portfolio-content.activate").classList.remove("activate");
         portfolioContent.querySelector(target).classList.add("activate");
         
@@ -128,11 +127,9 @@ document.querySelector(".pp-close").addEventListener("click",togglePortfolioPopu
 
 // portfolio item details replacement
 function togglePortfolioItemDetails(portfolioItem){
-    console.log(portfolioItem)
     // this code take the data from the thumbnail and then replace it into the popup window image replace
     document.querySelector(".pp-thumbnail img").src = // first paste into popup
     portfolioItem.querySelector(".portfolio-item-thumbnail img").src; //second the line original value
-    console.log(portfolioItem)
     // heading replace
     document.querySelector(".pp-header h3").innerHTML = 
    portfolioItem.querySelector(".portfolio-item-title").innerHTML;
@@ -188,7 +185,6 @@ if(e.target.classList.contains("link-item")){
 
 document.addEventListener("click", (e) => {
     if(e.target.classList.contains("graphicImg")){
-        console.log(e.target.parentElement)
         // img function calling
         toggleImgPopup()
         // and when your click gent the parent element details of when you click 
@@ -214,7 +210,6 @@ document.querySelector(".imgPop-close").addEventListener("click",toggleImgPopup)
 
 // for imgData or image copier functio
 const imgCopier = (imgData)=>{
-    console.log( imgData);
     document.querySelector(".imgPaste").src = // JIS main lana hai wo pahly ai ga
    imgData.querySelector(".graphics-items-thumbnail img").src 
 }
@@ -296,24 +291,30 @@ document.querySelector("#color_change_5").addEventListener("click", ()=>{
 
 // google sheeet sending message
 
-document.querySelector('#contact-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent the default form submission
 
-    const formData = new FormData(this);
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
 
-    fetch(this.action, {
+    const form = new FormData(this);
+    // const scriptURL = 'https://script.google.com/macros/s/AKfycbxBM6j2YnliCWHNwQOKW2dKn7Psmis2Gmr1jGkV9HMPa41_Gzza8YCV_4UoTIy5DAcC/exec'; // Replace with your Google Apps Script Web App URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxBM6j2YnliCWHNwQOKW2dKn7Psmis2Gmr1jGkV9HMPa41_Gzza8YCV_4UoTIy5DAcC/exec'; // Replace with your Google Apps Script Web App URL
+
+    fetch(scriptURL, { 
         method: 'POST',
-        body: formData,
+        body: form
     })
     .then(response => response.text())
-    .then(data => {
-        console.log(data); // Log the success message from the Google Apps Script
+    .then(result => {
         Swal.fire({
-        title: "Form Submitted",
-        text: "Thank you for reaching out to us. We will get back to you soon.",
-        icon: "success"
-        });
+                    title: "Form Submitted",
+                    text: "Thank you for reaching out to us. We will get back to you soon.",
+                    icon: "success"
+                    });
+        this.reset(); // Reset form after submission
     })
-    .catch(error => console.error('Error!', error.message));
+    .catch(error => {
+        alert('Error! Failed to send the message.');
+        console.error('Error!', error);
+    });
 });
 
